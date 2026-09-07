@@ -1,15 +1,37 @@
-using System;
+Console.Write("What is your grade percentage? ");
+string gradeInput = Console.ReadLine();
+int grade = int.Parse(gradeInput);
 
-class Program
+string letter;
+
+if (grade >= 90)
 {
-    static void Main(string[] args)
-    {
-        Console.Write("What is your first name? ");
-        string firstName = Console.ReadLine();
+    letter = "A";
+}
+else if (grade >= 80)
+{
+    letter = "B";
+}
+else if (grade >= 70)
+{
+    letter = "C";
+}
+else if (grade >= 60)
+{
+    letter = "D";
+}
+else
+{
+    letter = "F";
+}
 
-        Console.Write("What is your last name? ");
-        string lastName = Console.ReadLine();
+Console.WriteLine($"Your grade is: {letter}");
 
-        Console.WriteLine($"Your name is {lastName}, {firstName} {lastName}.");
-    }
+if (grade >= 70)
+{
+    Console.WriteLine("Congratulations! You passed the course.");
+}
+else
+{
+    Console.WriteLine("Keep working hard. You can do better next time!");
 }
